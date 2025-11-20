@@ -25,6 +25,25 @@
                 {% endfor %}
             </div>
         </div>
+
+        <div class="certifications-section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                {% for cert in certifications %}
+                <div class="cert-card">
+                    <div class="cert-icon">{{ cert.icon }}</div>
+                    <div class="cert-content">
+                        <h3 class="cert-name">{{ cert.name }}</h3>
+                        <p class="cert-issuer">{{ cert.issuer }}</p>
+                        <p class="cert-date">{{ cert.date }}</p>
+                        {% if cert.link %}
+                        <a href="{{ cert.link }}" target="_blank" class="cert-link">View Certificate →</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

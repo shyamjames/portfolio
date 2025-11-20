@@ -62,7 +62,32 @@ def about():
         {'name': 'Cybersecurity', 'icon': '🔐'},
         {'name': 'Git', 'icon': '📦'}
     ]
-    return render_template('about.html', title='About Me', skills=skills)
+    
+    certifications = [
+        {
+            'name': 'Google Cybersecurity Professional Certificate',
+            'issuer': 'Google',
+            'date': 'August 2024',
+            'link': 'https://coursera.org/verify/professional-cert/O15B0AZUSLZV',
+            'icon': '🔐'
+        },
+        {
+            'name': 'Certified Cybersecurity Analyst',
+            'issuer': 'REDTEAM360',
+            'date': 'November 2023',
+            'link': None,
+            'icon': '🛡️'
+        },
+        {
+            'name': 'Big Data 101',
+            'issuer': 'IBM',
+            'date': 'October 2023',
+            'link': 'https://courses.cognitiveclass.ai/certificates/c18331ce9db54575b979654e7d68cf6f',
+            'icon': '📊'
+        }
+    ]
+    
+    return render_template('about.html', title='About Me', skills=skills, certifications=certifications)
 
 def send_email(name, sender_email, message_text):
     """Send email using Gmail SMTP"""
