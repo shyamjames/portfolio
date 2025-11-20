@@ -27,3 +27,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+#Github Workspace File
+portfolio.code-workspace
