@@ -19,6 +19,10 @@
   --shadow-darker: #b4b0ab;
   --card-border: rgba(255, 255, 255, 0.45);
   --btn-border: rgba(255, 255, 255, 0.5);
+
+  /* Tactical Grid & Dot Pattern */
+  --pattern-dot: rgba(0, 102, 102, 0.15);
+  --pattern-grid: rgba(0, 102, 102, 0.04);
 }
 
 [data-theme="dark"] {
@@ -40,10 +44,20 @@
   --shadow-darker: #06080a;
   --card-border: rgba(255, 255, 255, 0.06);
   --btn-border: rgba(255, 255, 255, 0.08);
+
+  /* Tactical Grid & Dot Pattern */
+  --pattern-dot: rgba(20, 184, 166, 0.18);
+  --pattern-grid: rgba(20, 184, 166, 0.05);
 }
 
 body {
   background-color: var(--color-surface);
+  background-image: 
+    radial-gradient(circle, var(--pattern-dot) 1.25px, transparent 1.25px),
+    linear-gradient(to right, var(--pattern-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pattern-grid) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px, 28px 28px;
+  background-position: 0 0, 0 0, 0 0;
   color: var(--color-text);
   font-family: "JetBrains Mono", "Courier New", monospace;
   font-size: 15px;
