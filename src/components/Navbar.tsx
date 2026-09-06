@@ -29,7 +29,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-4 z-50 px-4 md:px-8 max-w-5xl mx-auto w-full">
+    <header className="sticky top-4 z-50 px-4 md:px-8 max-w-7xl mx-auto w-full">
       <nav className="neu-flat rounded-2xl px-5 sm:px-6 py-3.5 flex items-center justify-between border border-[var(--card-border)]">
         {/* Brand */}
         <a

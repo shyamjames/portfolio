@@ -2,7 +2,7 @@ import { projects } from "@/data/portfolio";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 px-4 md:px-8 max-w-5xl mx-auto w-full">
+    <section id="projects" className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs text-primary-theme neu-inset-sm px-2.5 py-1 rounded-md">
