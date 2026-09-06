@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #006666;
+  --color-primary-hover: #005252;
+  --color-primary-text: #ffffff;
+  --color-secondary: #F1F2F5;
+  --color-success: #00A63D;
+  --color-warning: #FE9900;
+  --color-danger: #FF2157;
+  --color-surface: #E7E5E4;
+  --color-surface-hover: #EBE9E8;
+  --color-text: #1E2938;
+  --color-text-muted: #556274;
+  --color-border: #D5D2CE;
+
+  --shadow-light: #ffffff;
+  --shadow-dark: #c5c2be;
+  --shadow-darker: #b4b0ab;
+  --card-border: rgba(255, 255, 255, 0.45);
+  --btn-border: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] {
+  --color-primary: #14b8a6;
+  --color-primary-hover: #0d9488;
+  --color-primary-text: #042f2e;
+  --color-secondary: #1e293b;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #f43f5e;
+  --color-surface: #14181d;
+  --color-surface-hover: #1a2027;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #262f3a;
+
+  --shadow-light: #1d222a;
+  --shadow-dark: #0b0e12;
+  --shadow-darker: #06080a;
+  --card-border: rgba(255, 255, 255, 0.06);
+  --btn-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: "Space Mono", monospace;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Semantic theme classes */
+.text-main {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-primary-theme {
+  color: var(--color-primary);
+}
+
+.border-main {
+  border-color: var(--color-border);
+}
+
+/* Neumorphic tactile shadow system */
+.neu-flat {
+  background-color: var(--color-surface);
+  box-shadow: 7px 7px 16px var(--shadow-dark), -7px -7px 16px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.neu-raised {
+  background-color: var(--color-surface);
+  box-shadow: 10px 10px 22px var(--shadow-dark), -10px -10px 22px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neu-sm {
+  background-color: var(--color-surface);
+  box-shadow: 4px 4px 9px var(--shadow-dark), -4px -4px 9px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neu-pill {
+  background-color: var(--color-surface);
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neu-inset {
+  background-color: var(--color-surface);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neu-inset-sm {
+  background-color: var(--color-surface);
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neu-card {
+  background-color: var(--color-surface);
+  box-shadow: 8px 8px 18px var(--shadow-dark), -8px -8px 18px var(--shadow-light);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.neu-card:hover {
+  box-shadow: 12px 12px 26px var(--shadow-darker), -12px -12px 26px var(--shadow-light);
+  transform: translateY(-2px);
+}
+
+.neu-btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.2), -3px -3px 9px var(--shadow-light);
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neu-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 7px 7px 18px rgba(0, 0, 0, 0.28), -4px -4px 12px var(--shadow-light);
+  transform: translateY(-1px);
+}
+
+.neu-btn-primary:active {
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.45);
+  transform: translateY(0);
+}
+
+.neu-btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light);
+  border: 1px solid var(--btn-border);
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neu-btn-secondary:hover {
+  box-shadow: 7px 7px 15px var(--shadow-darker), -7px -7px 15px var(--shadow-light);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.neu-btn-secondary:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+  transform: translateY(0);
+}
+
+/* Custom focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+}
