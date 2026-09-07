@@ -6,10 +6,12 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative">
+      <CustomCursor />
       <Navbar />
       <Hero />
       <About />

@@ -1,4 +1,5 @@
 import { profile } from "@/data/portfolio";
+import FpsCounter from "@/components/FpsCounter";
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} {profile.name}. All systems normal.</span>
         </div>
         <div className="flex items-center gap-3">
+          <FpsCounter />
           <span className="neu-inset-sm px-2.5 py-1 rounded">
             DESIGN: NEUMORPHIC
           </span>

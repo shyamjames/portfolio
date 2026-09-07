@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import FpsCounter from "@/components/FpsCounter";
 
 const links = [
   { href: "#about", label: "about" },
@@ -64,6 +65,9 @@ export default function Navbar() {
           </ul>
 
           <div className="h-4 w-px bg-[var(--color-border)] mx-1"></div>
+
+          {/* Live Browser FPS */}
+          <FpsCounter className="hidden sm:inline-flex" />
 
           {/* Theme Toggle Button */}
           <button

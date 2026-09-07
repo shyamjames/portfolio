@@ -1,9 +1,11 @@
 import { profile } from "@/data/portfolio";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Hero() {
   return (
     <section id="home" className="pt-28 pb-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
-      <div className="neu-card p-6 md:p-10">
+      <ScrollReveal>
+        <div className="neu-card p-6 md:p-10">
         {/* Terminal / Status Bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[var(--color-border)]">
           <div className="flex items-center gap-2">
@@ -76,6 +78,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+    </ScrollReveal>
     </section>
   );
 }
