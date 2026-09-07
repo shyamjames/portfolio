@@ -7,10 +7,12 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import ShaderBackground from "@/components/ShaderBackground";
 
 export default function Home() {
   return (
     <main className="relative">
+      <ShaderBackground />
       <CustomCursor />
       <Navbar />
       <Hero />
